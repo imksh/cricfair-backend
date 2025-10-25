@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://ycc-overlay.netlify.app/"],
+    origin: ["http://localhost:5173","https://ycc-overlay.netlify.app"],
     credentials: true,
   })
 );

@@ -42,6 +42,9 @@ export const addScore = (req, res) => {
       bowler,
     };
 
+    console.log("addScore: ",data);
+    
+
     res.status(200).json({ message: "Score added successfully", data });
   } catch (error) {
     console.error("Error in addScore control: ", error.message);
@@ -51,6 +54,7 @@ export const addScore = (req, res) => {
 
 export const getScore = (req, res) => {
   try {
+    console.log("getScore: ",data);
     res.status(200).json(data);
   } catch (error) {
     console.error("Error in getScore control: ", error.message);
