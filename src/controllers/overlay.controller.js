@@ -9,7 +9,8 @@ let data = {
   isFour: false,
   isSix: false,
   isOut: false,
-  bowler: {}, 
+  showLive: "",
+  bowler: {},
 };
 
 export const addScore = (req, res) => {
@@ -25,6 +26,7 @@ export const addScore = (req, res) => {
       isFour,
       isSix,
       isOut,
+      showLive,
       bowler,
     } = req.body;
 
@@ -39,11 +41,11 @@ export const addScore = (req, res) => {
       isFour,
       isSix,
       isOut,
+      showLive,
       bowler,
     };
 
-    console.log("addScore: ",data);
-    
+    console.log("addScore: ", data);
 
     res.status(200).json({ message: "Score added successfully", data });
   } catch (error) {
@@ -54,7 +56,7 @@ export const addScore = (req, res) => {
 
 export const getScore = (req, res) => {
   try {
-    console.log("getScore: ",data);
+    console.log("getScore: ", data);
     res.status(200).json(data);
   } catch (error) {
     console.error("Error in getScore control: ", error.message);
