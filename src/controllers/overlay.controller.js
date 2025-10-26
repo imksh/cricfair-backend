@@ -10,6 +10,7 @@ let data = {
   isSix: false,
   isOut: false,
   showLive: "",
+  inning:"",
   bowler: {},
 };
 
@@ -27,6 +28,7 @@ export const addScore = (req, res) => {
       isSix,
       isOut,
       showLive,
+      inning,
       bowler,
     } = req.body;
 
@@ -42,6 +44,7 @@ export const addScore = (req, res) => {
       isSix,
       isOut,
       showLive,
+      inning,
       bowler,
     };
 
